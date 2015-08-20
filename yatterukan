@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+# coding: utf-8
+
+require 'rubygems'
+require 'thor'
+
+class Yatterukan < Thor
+#   option :from, :reqired => true
+  option :why, :type => :string, :default => "業務", :desc => "やってるか確認してもらうもの"
+  desc 'yatteru','a yatteru check'
+  def yatteru
+    puts "私は#{options[:why]}をちゃんとやってますか？\n"
+    puts "やってるやってる"
+  end
+end
+
+Yatterukan.start
